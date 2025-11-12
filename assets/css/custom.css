@@ -1,1 +1,23 @@
 /* Taruh CSS Custom Disini */
+.bg-body-secondary {
+    background-color: gray!important;
+}
+.nav-link {
+    color: black!important;
+}
+.nav-header {
+    color: black!important;
+}
+.sidebar-brand {
+    background-color: gray!important;
+}
+.sidebar-brand .brand-text{
+     font-family: "Merriweather", serif;
+    color:black;
+    font-size: 30px;
+}
+.nav-link:hover {
+    background-color:  gray!important;
+    color: var(--color-white);
+    transform: translateX(4px);
+}
