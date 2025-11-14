@@ -24,9 +24,23 @@ CREATE TABLE `tb_departemen` (
   `id_departemen` smallint NOT NULL AUTO_INCREMENT,
   `nama_departemen` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id_departemen`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `tb_departemen` */
+
+LOCK TABLES `tb_departemen` WRITE;
+
+insert  into `tb_departemen`(`id_departemen`,`nama_departemen`) values 
+(1,'HRD'),
+(2,'KEUANGAN'),
+(3,'IT'),
+(4,'PRODUKSI'),
+(5,'MARKETING'),
+(6,'LOGISTIK'),
+(7,'CUSTOMER SERVICE'),
+(8,'MANAJEMEN');
+
+UNLOCK TABLES;
 
 /*Table structure for table `tb_jabatan` */
 
@@ -39,6 +53,19 @@ CREATE TABLE `tb_jabatan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `tb_jabatan` */
+
+LOCK TABLES `tb_jabatan` WRITE;
+
+insert  into `tb_jabatan`(`kode_jabatan`,`nama_jabatan`) values 
+('CS','Customer Servicen'),
+('D','Direktur'),
+('HRD','Human Resource'),
+('MRT','Marketing'),
+('OBG','Office Boy/Girl'),
+('SITP','Staf IT Programmer'),
+('SP','Supervisor');
+
+UNLOCK TABLES;
 
 /*Table structure for table `tb_pegawai` */
 
@@ -55,9 +82,18 @@ CREATE TABLE `tb_pegawai` (
   `telp` char(20) COLLATE utf8mb4_unicode_ci NOT NULL,
   `status_pgw` tinyint(1) NOT NULL,
   PRIMARY KEY (`id_pgw`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `tb_pegawai` */
+
+LOCK TABLES `tb_pegawai` WRITE;
+
+insert  into `tb_pegawai`(`id_pgw`,`nik_pgw`,`nama_pgw`,`jabatan_pgw`,`alamat`,`departemen`,`email`,`telp`,`status_pgw`) values 
+(4,'234638902','HSU3HI3','D','H2IH2HR',4,'broo@gmail.com','19AS',1),
+(5,'34526789302','brooclyn','CS','borong',5,'lisa@gmail.com','45678910',2),
+(6,'097847227462','hugo anggol','HRD','ruteng',7,'huhgo@gmail.com','7849726e62',1);
+
+UNLOCK TABLES;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
